@@ -6,7 +6,7 @@ import java.awt.*;
  * Created by qinbingbing on 2/9/16.
  */
 interface HasColor {
-    java.awt.Color getColor();
+    Color getColor();
 }
 
 class Colored<T extends HasColor> {

@@ -19,7 +19,7 @@ class Colored1<T extends HasColor> extends HoldItem<T> {
         super(item);
     }
 
-    java.awt.Color color() {
+    Color color() {
         return item.getColor();
     }
 }
