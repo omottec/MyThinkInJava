@@ -8,7 +8,7 @@ import java.nio.CharBuffer;
  */
 public class UsingBuffers {
     private static void symmeticScramble(CharBuffer buffer) {
-        while (buffer.hasRemaining()) {
+        while (buffer.hasRemaining() && buffer.remaining() > 1) {
             buffer.mark();
             char c1 = buffer.get();
             char c2 = buffer.get();
@@ -18,7 +18,7 @@ public class UsingBuffers {
     }
 
     public static void main(String[] args) {
-        char[] data = "UsingBuffers".toCharArray();
+        char[] data = "UsingBuffer".toCharArray();
         ByteBuffer bb = ByteBuffer.allocate(data.length * 2);
         CharBuffer cb = bb.asCharBuffer();
         cb.put(data);
