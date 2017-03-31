@@ -22,15 +22,15 @@ public class ProcessFiles {
 
     public void start(String[] args) {
         if (args.length == 0)
-            processDirectoryTree(new File("."));
+            processDirectoryTree(new File(""));
         else
             for (String arg : args) {
                 File fileArg = new File(arg);
                 if (fileArg.isDirectory())
                     processDirectoryTree(fileArg);
                 else {
-                    if (!arg.endsWith("." + ext))
-                        arg += "." + ext;
+                    if (!arg.endsWith("" + ext))
+                        arg += "" + ext;
                     try {
                         System.out.println("-----------------------------");
                         System.out.println(new File(arg));

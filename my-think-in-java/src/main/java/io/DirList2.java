@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  */
 public class DirList2 {
     public static void main(String[] args) {
-        File file = new File(".");
+        File file = new File("");
         String[] list;
         if (args.length == 0)
             list = file.list();

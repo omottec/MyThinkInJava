@@ -32,7 +32,7 @@ public class SortedDirList {
     }
 
     public static void main(String[] args) {
-        SortedDirList sortedDirList = new SortedDirList(".");
+        SortedDirList sortedDirList = new SortedDirList("");
         String[] array = sortedDirList.list();
         File dir = sortedDirList.getDir();
         System.out.println(dir.getPath());
