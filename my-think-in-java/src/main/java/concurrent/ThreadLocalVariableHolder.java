@@ -22,7 +22,10 @@ class Accessor implements Runnable {
             System.out.println(this);
             Thread.currentThread().yield();
         }
-        System.out.println(this + " is interrupted");
+        System.out.println(this + " ,Thread.currentThread().isAlive:" + Thread.currentThread().isAlive());
+        System.out.println(this + " ,Thread.currentThread().isInterrupted:" + Thread.currentThread().isInterrupted());
+        System.out.println(this + " ,Thread.interrupted:" + Thread.interrupted());
+        System.out.println(this + " ,Thread.interrupted:" + Thread.interrupted());
     }
 
     @Override
