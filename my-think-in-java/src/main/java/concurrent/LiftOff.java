@@ -20,6 +20,11 @@ public class LiftOff implements Runnable {
     }
 
     @Override
+    public String toString() {
+        return status();
+    }
+
+    @Override
     public void run() {
         while (countDown-- > 0) {
             System.out.print(status());
