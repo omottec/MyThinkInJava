@@ -49,6 +49,9 @@ public class CallableDemo {
             @Override
             public void run() {
                 System.out.println("timer task thread id " + Thread.currentThread().getId());
+                System.out.println("interrupt main thread");
+                System.out.println("shutdownNow");
+                exec.shutdownNow();
             }
         }, 6000);
         for (int i = 0; i < results.size(); i++) {
