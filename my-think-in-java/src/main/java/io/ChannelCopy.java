@@ -26,9 +26,9 @@ public class ChannelCopy {
             out = new FileOutputStream(args[1]).getChannel();
             ByteBuffer buffer = ByteBuffer.allocate(BUFFER_SIZE);
             while (in.read(buffer) != -1) {
-                buffer.flip();
+                buffer.flip(); // prepare for writing
                 out.write(buffer);
-                buffer.clear();
+                buffer.clear(); // prepare for reading
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
